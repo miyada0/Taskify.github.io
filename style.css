@@ -1,75 +1,96 @@
 body {
-    font-family: sans-serif;
-    background-color: #f9f9f9;
-    text-align: center;
-    padding: 50px;
+  font-family: sans-serif;
+  background-color: #f9f9f9;
+  text-align: center;
+  padding: 50px;
 }
 
 h1 {
-    font-size: 3rem;
-    margin: 0;
+  font-size: 3rem;
+  margin: 0;
 }
 
 h2 {
-    font-weight: normal;
-    color: #666;
-    margin-top: 0;
+  font-weight: normal;
+  color: #666;
+  margin-top: 0;
 }
 
 .input-section {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 input[type="text"] {
-    padding: 6px;
-    width: 250px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    margin-right: 10px;
-    font-size: 0.9rem;
+  padding: 6px;
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-right: 10px;
+  font-size: 0.9rem;
 }
 
 button {
-    padding: 3px 10px;
-    font-size: 0.9rem;
-    border: none;
-    border-radius: 8px;
-    background-color: #4caf50;
-    color: rgb(7, 6, 6);
-    font-weight: bold;
-    cursor: pointer;
+  padding: 6px 10px;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #4caf50;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
 }
+
+/* TASK LIST STYLING */
 ul {
-    list-style: none;
-    padding: 0;
-    margin-top: 30px;
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: left;
+  list-style: none;
+  padding: 0;
+  margin-top: 30px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
 }
 
 li {
-    padding: 10px;
-    background: #eaeaea;
-    margin-bottom: 10px;
-    border-radius: 6px;
-    transition: 0.3s;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  background: #eaeaea;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  transition: 0.3s;
+  font-size: 1rem;
+  word-break: break-word;
 }
 
 li:hover {
-    background: #dcdcdc;
+  background: #dcdcdc;
+}
+
+li span {
+  flex-grow: 1;
+}
+
+li button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin-left: 10px;
+}
+
+li button:hover {
+  background-color: #f0f0f0;
+  border-radius: 5px;
 }
 
 .completed {
-    text-decoration: line-through;
-    color: gray;
+  text-decoration: line-through;
+  color: gray;
 }
 
+/* RESPONSIVE DESIGN */
 @media (max-width: 600px) {
   body {
     padding: 20px;
@@ -97,7 +118,7 @@ li:hover {
   }
 
   button {
-    width: 100%;
+    width: auto;
     max-width: 90%;
   }
 
@@ -107,14 +128,15 @@ li:hover {
   }
 
   li {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     font-size: 0.9rem;
-    padding: 8px;
-    flex-direction: column;
-    align-items: flex-start;
+    padding: 8px 10px;
   }
 
   li button {
-    align-self: flex-end;
-    margin-top: 5px;
+    margin-top: 0;
+    align-self: auto;
   }
 }
