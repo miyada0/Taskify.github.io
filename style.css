@@ -1,8 +1,9 @@
+/* General styles */
 body {
   font-family: sans-serif;
   background-color: #f9f9f9;
   text-align: center;
-  padding: 50px;
+  padding: 50px 20px;
 }
 
 h1 {
@@ -20,37 +21,39 @@ h2 {
   margin-top: 20px;
 }
 
-input[type="text"] {
-  padding: 6px;
-  width: 250px;
+input[type="text"],
+#todo-input {
+  padding: 10px;
+  width: 300px;
   border: 1px solid #ccc;
   border-radius: 8px;
   margin-right: 10px;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 button {
-  padding: 6px 10px;
-  font-size: 0.9rem;
+  padding: 10px 15px;
   border: none;
   border-radius: 8px;
   background-color: #4caf50;
   color: white;
   font-weight: bold;
   cursor: pointer;
+  font-size: 1rem;
 }
 
-/* TASK LIST STYLING */
 ul {
   list-style: none;
   padding: 0;
   margin-top: 30px;
-  max-width: 400px;
+  max-width: 350px;
   margin-left: auto;
   margin-right: auto;
+  width: 100%;
   text-align: left;
 }
 
+/* Task items */
 li {
   display: flex;
   justify-content: space-between;
@@ -59,30 +62,27 @@ li {
   background: #eaeaea;
   margin-bottom: 10px;
   border-radius: 6px;
-  transition: 0.3s;
   font-size: 1rem;
   word-break: break-word;
 }
 
-li:hover {
-  background: #dcdcdc;
-}
-
 li span {
-  flex-grow: 1;
+  flex: 1;
+  margin-right: 10px;
 }
 
 li button {
   background: transparent;
   border: none;
   cursor: pointer;
-  font-size: 1.2rem;
-  margin-left: 10px;
+  font-size: 1.3rem;
+  color: #444;
+  padding: 6px;
 }
 
 li button:hover {
-  background-color: #f0f0f0;
-  border-radius: 5px;
+  background-color: #ddd;
+  border-radius: 4px;
 }
 
 .completed {
@@ -90,10 +90,10 @@ li button:hover {
   color: gray;
 }
 
-/* RESPONSIVE DESIGN */
-@media (max-width: 600px) {
+/* Mobile responsiveness */
+@media (max-width: 480px) {
   body {
-    padding: 20px;
+    padding: 30px 15px;
   }
 
   h1 {
@@ -101,42 +101,36 @@ li button:hover {
   }
 
   h2 {
-    font-size: 1.1rem;
-  }
-
-  .input-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    font-size: 1rem;
   }
 
   input[type="text"],
   #todo-input {
     width: 100%;
-    max-width: 90%;
+    max-width: 100%;
     margin-bottom: 10px;
+    font-size: 1rem;
   }
 
   button {
-    width: auto;
-    max-width: 90%;
+    width: 100%;
+    max-width: 100%;
+    font-size: 1rem;
+    padding: 10px;
   }
 
   ul {
     max-width: 100%;
-    padding: 0;
   }
 
   li {
     flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 0.9rem;
-    padding: 8px 10px;
+    font-size: 0.95rem;
+    padding: 10px;
   }
 
   li button {
+    font-size: 1.2rem;
     margin-top: 0;
-    align-self: auto;
   }
 }
