@@ -1,4 +1,8 @@
-/* General styles */
+Sure! Here's your **complete and corrected `style.css` code** without any comments — fully responsive, clean, and working well on both desktop and mobile:
+
+---
+
+```css
 body {
   font-family: sans-serif;
   background-color: #f9f9f9;
@@ -53,22 +57,25 @@ ul {
   text-align: left;
 }
 
-/* Task items */
 li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 12px;
   background: #eaeaea;
+  padding: 10px 12px;
   margin-bottom: 10px;
   border-radius: 6px;
   font-size: 1rem;
   word-break: break-word;
+  white-space: normal;
+  min-height: 48px;
 }
 
 li span {
   flex: 1;
   margin-right: 10px;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 li button {
@@ -78,6 +85,7 @@ li button {
   font-size: 1.3rem;
   color: #444;
   padding: 6px;
+  flex-shrink: 0;
 }
 
 li button:hover {
@@ -90,7 +98,6 @@ li button:hover {
   color: gray;
 }
 
-/* Mobile responsiveness */
 @media (max-width: 480px) {
   body {
     padding: 30px 15px;
@@ -124,7 +131,6 @@ li button:hover {
   }
 
   li {
-    flex-direction: row;
     font-size: 0.95rem;
     padding: 10px;
   }
@@ -134,3 +140,6 @@ li button:hover {
     margin-top: 0;
   }
 }
+```
+
+Let me know if you want me to bundle the HTML + JS along with this for a full working version.
